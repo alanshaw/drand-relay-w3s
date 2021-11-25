@@ -1,0 +1,20 @@
+{
+  "name": "drand-relay-w3s",
+  "version": "0.0.0",
+  "description": "A drand relay that publishes randomness to IPFS, Filecoin and maintains an IPNS record pointing at the latest value.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan Shaw",
+  "license": "MIT",
+  "dependencies": {
+    "@web-std/fetch": "^3.0.0",
+    "abort-controller": "^3.0.0",
+    "debug": "^4.3.2",
+    "drand-client": "^0.2.0",
+    "uint8arrays": "^3.0.0",
+    "web3.storage": "^3.4.0"
+  }
+}
