@@ -5,6 +5,9 @@ import { Web3Storage, File } from 'web3.storage'
 import * as Name from 'web3.storage/name'
 import * as uint8arrays from 'uint8arrays'
 import debug from 'debug'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const log = debug('drand-relay-w3s')
 
@@ -19,6 +22,10 @@ const urls = [
 ]
 
 async function main () {
+  if (!log.enabled) {
+    console.log('🪵 Enable logging with environment variable DEBUG=drand-relay-w3s')
+  }
+
   const { W3S_TOKEN, W3S_NAME_SIGNING_KEY } = process.env
 
   if (!W3S_TOKEN) throw new Error('missing W3S_TOKEN')
