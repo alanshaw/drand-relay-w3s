@@ -1,5 +1,7 @@
 # drand-relay-w3s
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 A drand relay that publishes randomness to IPFS, Filecoin and maintains an IPNS record pointing at the latest value.
 
 The IPNS key to follow is: `k51qzi5uqu5dlcuzv5xhg1zqn48gobcvn2mx13uoig7zfj8rz6zvqdxsugka9z`
@@ -31,5 +33,22 @@ W3S_NAME_SIGNING_KEY=<SIGNING_KEY>
 Run the relay:
 
 ```sh
-node index.js
+DEBUG=drand-relay-w3s node bin/start.js
 ```
+
+### Docker
+
+There's a `Dockerfile` that runs the relay in docker.
+
+```sh
+docker build -t drand-relay-w3s .
+docker run -d drand-relay-w3s
+```
+
+## Contribute
+
+Feel free to dive in! [Open an issue](https://github.com/alanshaw/drand-relay-w3s/issues/new) or submit PRs.
+
+## License
+
+[MIT](LICENSE) © Alan Shaw
